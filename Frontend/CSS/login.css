@@ -1,0 +1,224 @@
+/* ================================
+   DoIt — Login Page Styles
+   ================================ */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Page background — centers the card */
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* ── Auth Card ── */
+.auth-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+}
+
+/* ── Red Header ── */
+.auth-header {
+  background-color: #C0392B;
+  padding: 36px 32px 28px;
+  text-align: center;
+}
+
+.auth-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.80);
+  margin-bottom: 24px;
+}
+
+/* ── Tab Switcher ── */
+.auth-tabs {
+  display: flex;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  /* Inactive tab */
+  background: transparent;
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Active tab — white pill */
+.tab.active {
+  background: #ffffff;
+  color: #C0392B;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+/* ── Form Body ── */
+.auth-body {
+  padding: 32px;
+  background: #ffffff;
+}
+
+/* ── Form Group ── */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+/* ── Input Field ── */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #D0D0D0;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 0 14px;
+  transition: border-color 0.15s;
+}
+
+/* Red border when input inside wrapper is focused */
+.input-wrapper:focus-within {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.10);
+}
+
+/* ── Left Icon (email / lock) ── */
+.input-icon-left {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  opacity: 0.75;
+}
+
+/* ── Right Icon (eye toggle) ── */
+.input-icon-right {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-left: 10px;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+/* ── Input field inside wrapper ── */
+.input-wrapper input {
+  flex: 1;
+  padding: 14px 0;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1A1A1A;
+  background: transparent;
+}
+
+.input-wrapper input::placeholder {
+  color: #AAAAAA;
+}
+
+/* ── Forgot Password Link ── */
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  color: #C0392B;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Sign In Button ── */
+.btn-signin {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-top: 28px;
+  background-color: #C0392B;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(192, 57, 43, 0.35);
+  transition: background-color 0.15s, box-shadow 0.15s;
+}
+
+.btn-signin:hover {
+  background-color: #A93226;
+  box-shadow: 0 6px 18px rgba(192, 57, 43, 0.45);
+}
+
+.btn-signin:active {
+  background-color: #922B21;
+}
+
+/* ── Footer ── */
+.auth-footer {
+  text-align: center;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #F0F0F0;
+  font-size: 14px;
+  color: #555555;
+}
+
+.auth-footer a {
+  color: #C0392B;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 520px) {
+  .auth-header {
+    padding: 28px 20px 20px;
+  }
+
+  .auth-body {
+    padding: 24px 20px;
+  }
+}
