@@ -5,11 +5,7 @@ const eyeIcon       = document.getElementById('eyeIcon');
 const eyeOpenPath   = '../images/icons/eye.svg';
 const eyeClosedPath = '../images/icons/closed-eye.svg';
 
-/* ──────────────────────────────
-   PASSWORD VISIBILITY TOGGLE
-   Clicking the eye icon switches
-   the input between text and password
-   ────────────────────────────── */
+/* Toggle password visibility on eye icon click */
 eyeIcon.addEventListener('click', function () {
 
   if (passwordInput.type === 'password') {

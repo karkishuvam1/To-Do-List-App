@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoIt — Register</title>
+  <link rel="stylesheet" href="../CSS/register.css" />
+</head>
+
+<body>
+
+  <div class="auth-card">
+
+    <!-- ── Red Header ── -->
+    <div class="auth-header">
+      <h1 class="auth-title">Create account</h1>
+      <p class="auth-subtitle">Start managing your tasks</p>
+
+      <!-- Tab Switcher — Register is active -->
+      <div class="auth-tabs">
+        <a href="login.html" class="tab">Login</a>
+        <button class="tab active">Register</button>
+      </div>
+    </div>
+
+    <!-- ── Form Body ── -->
+    <div class="auth-body">
+
+      <!-- Photo Upload Circle -->
+      <div class="photo-upload">
+        <!-- Hidden file input triggered by clicking the circle -->
+        <input type="file" id="photoInput" accept="image/*" />
+
+        <!-- Clickable upload circle -->
+        <label for="photoInput" class="photo-circle">
+          <!-- Preview image (hidden by default, shown after upload via JS) -->
+          <img id="photoPreview" src="" alt="Profile photo preview" />
+          <!-- Default state — camera icon + text -->
+          <div class="photo-default" id="photoDefault">
+            <img src="../images/icons/camera.svg" alt="camera icon" class="camera-icon" />
+            <span>Photo</span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullName">Full name</label>
+        <div class="input-wrapper">
+          <img src="../images/icons/user.svg" class="input-icon-left" alt="user icon" />
+          <input
+            type="text"
+            id="fullName"
+            placeholder="Shuvam Karki"
+          />
+        </div>
+      </div>
+
+      <!-- Email Address -->
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <div class="input-wrapper">
+          <img src="../images/icons/email.png" class="input-icon-left" alt="email icon" />
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+          />
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-wrapper">
+          <img src="../images/icons/lock.svg" class="input-icon-left" alt="lock icon" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Create a password"
+          />
+          <!-- Eye icon — toggles password visibility via register.js -->
+          <img
+            src="../images/icons/eye.svg"
+            class="input-icon-right"
+            id="eyeIcon"
+            alt="Show password"
+          />
+        </div>
+      </div>
+
+      <!-- Create Account Button -->
+      <button class="btn-primary">Create Account</button>
+
+      <!-- Terms & Privacy -->
+      <p class="terms-text">
+        By registering you agree to our
+        <a href="#">Terms</a> and <a href="#">Privacy Policy</a>
+      </p>
+
+      <!-- Footer — link to Login -->
+      <p class="auth-footer">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- Register JS — password toggle & photo preview -->
+  <script src="../Javascript/register.js"></script>
+
+</body>
+</html>
