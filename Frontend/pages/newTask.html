@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoIt — Add New Task</title>
+  <link rel="stylesheet" href="../CSS/newTask.css" />
+</head>
+
+<body>
+  <div class="modal-card">
+
+    <!-- RED HEADER -->
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-header-icon">
+          <img src="../images/icons/plus.svg" alt="add task" />
+        </div>
+        <div class="modal-header-text">
+          <h1 class="modal-title">Add new task</h1>
+          <p class="modal-subtitle">Fill in the details below</p>
+        </div>
+      </div>
+      <!-- Close button -->
+      <button class="modal-close" id="closeBtn" aria-label="Close">
+        <img src="../images/icons/cross.svg" alt="close" />
+      </button>
+    </div>
+
+    <!-- FORM BODY -->
+    <div class="modal-body">
+
+      <!-- Task Title -->
+      <div class="form-group">
+        <label class="form-label">
+          <img src="../images/icons/task.svg" alt="" />
+          Task title
+        </label>
+        <input
+          type="text"
+          class="form-input"
+          id="taskTitle"
+          placeholder="Design the dashboard screen"
+        />
+      </div>
+
+      <!-- Description -->
+      <div class="form-group">
+        <label class="form-label">
+          <img src="../images/icons/description.svg" alt="" />
+          Description
+        </label>
+        <textarea
+          class="form-textarea"
+          id="taskDesc"
+          placeholder="Add a description"
+          rows="3"
+        ></textarea>
+      </div>
+
+      <!-- Priority -->
+      <div class="form-group">
+        <label class="form-label">
+          <img src="../images/icons/flag.svg" alt="" />
+          Priority
+        </label>
+        <div class="priority-row">
+          <!-- JS toggles .active class on click -->
+          <button class="priority-btn low active" data-priority="low">
+            <span class="priority-dot"></span>
+            Low
+          </button>
+          <button class="priority-btn medium" data-priority="medium">
+            <span class="priority-dot"></span>
+            Medium
+          </button>
+          <button class="priority-btn high" data-priority="high">
+            <span class="priority-dot"></span>
+            High
+          </button>
+        </div>
+      </div>
+
+      <!-- Due Date & Time — two columns -->
+      <div class="form-row">
+
+        <div class="form-group">
+          <label class="form-label">
+            <img src="../images/icons/calender.svg" alt="" />
+            Due date <span class="required">*</span>
+          </label>
+          <div class="input-wrapper">
+            <input
+              type="date"
+              class="form-input no-border"
+              id="dueDate"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <img src="../images/icons/time.svg" alt="" />
+            Time
+          </label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              class="form-input no-border"
+              id="taskTime"
+              placeholder="10:00 AM"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Category -->
+      <div class="form-group">
+        <label class="form-label">
+          <img src="../images/icons/task-category.svg" alt="" />
+          Category
+        </label>
+        <div class="category-row" id="categoryRow">
+
+          <!-- Work — active by default -->
+          <button class="category-btn active" data-category="work">
+            <img src="../images/icons/work.svg" alt="" />
+            Work
+          </button>
+
+          <button class="category-btn" data-category="personal">
+            <img src="../images/icons/house.svg" alt="" />
+            Personal
+          </button>
+
+          <button class="category-btn" data-category="shopping">
+            <img src="../images/icons/shopping.svg" alt="" />
+            Shopping
+          </button>
+
+          <!-- Add new category — dashed border -->
+          <button class="category-btn category-new" id="newCategoryBtn">
+            <img src="../images/icons/add.svg" alt="" />
+            New
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- /modal-body -->
+
+    <!-- ── FOOTER BUTTONS ── -->
+    <div class="modal-footer">
+      <button class="btn-cancel" id="cancelBtn">
+        <img src="../images/icons/cancel.svg" alt="" />
+        Cancel
+      </button>
+      <button class="btn-add" id="addTaskBtn">
+        <img src="../images/icons/add-new-task-tick.svg" alt="" />
+        Add Task
+      </button>
+    </div>
+
+  </div>
+  <!-- /modal-card -->
+
+  <script src="../Javascript/newTask.js"></script>
+
+</body>
+</html>

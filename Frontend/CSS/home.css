@@ -1,0 +1,517 @@
+/* 
+   DoIt — Home Page Styles
+    */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* ── Reset ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: #1A1A1A;
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+/* ── Shared container width ── */
+.nav-container,
+.hero-container,
+.section-container,
+.cta-container,
+.footer-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 
+   NAVBAR
+    */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.nav-logo-icon {
+  width: 36px;
+  height: 36px;
+  background: #C0392B;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover {
+  color: #C0392B;
+}
+
+/* 
+   HERO SECTION
+    */
+.hero {
+  background: #C0392B;
+  padding: 64px 0 80px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Badge */
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.hero-badge img {
+  width: 14px;
+  height: 14px;
+}
+
+/* Heading */
+.hero-title {
+  font-size: 44px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.80);
+  max-width: 540px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+/* Hero buttons */
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  justify-content: center;
+}
+
+.btn-white {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #C0392B;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-white img {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-white:hover {
+  opacity: 0.90;
+}
+
+.btn-outline-white {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.60);
+  border-radius: 10px;
+  padding: 13px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.90);
+}
+
+/* Hero task preview card */
+.hero-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.hero-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.hero-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.hero-card-date {
+  font-size: 13px;
+  color: #888888;
+}
+
+/* Task row inside card */
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid #F5F5F5;
+}
+
+.task-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid #D0D0D0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Checked state — red circle */
+.task-check.checked {
+  background: #C0392B;
+  border-color: #C0392B;
+}
+
+.task-check.checked img {
+  width: 10px;
+  height: 10px;
+}
+
+.task-title {
+  flex: 1;
+  font-size: 14px;
+  color: #1A1A1A;
+}
+
+/* Strikethrough for completed tasks */
+.task-title.done {
+  text-decoration: line-through;
+  color: #AAAAAA;
+}
+
+/* Priority badges */
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.badge-medium {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.badge-high {
+  background: #FCEBEB;
+  color: #A32D2D;
+}
+
+/* 
+   SHARED SECTION STYLES
+    */
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #C0392B;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  color: #888888;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* 
+   FEATURES SECTION
+    */
+.features {
+  background: #2A2A2A;
+  padding: 80px 0;
+}
+
+.features .section-title {
+  color: #ffffff;
+}
+
+.features .section-subtitle {
+  color: #AAAAAA;
+}
+
+/* 3-column feature grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.feature-card {
+  background: #1E1E1E;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  background: #FCE9E6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.feature-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.feature-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 13px;
+  color: #AAAAAA;
+  line-height: 1.6;
+}
+
+/* 
+   HOW IT WORKS SECTION
+    */
+.how-it-works {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+/* 3-column steps grid */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.step {
+  text-align: center;
+}
+
+/* Numbered circle */
+.step-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #C0392B;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.step h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.7;
+}
+
+/* 
+   CTA SECTION
+    */
+.cta {
+  background: #C0392B;
+  padding: 80px 0;
+}
+
+.cta-container {
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.80);
+  margin-bottom: 36px;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 
+   FOOTER
+    */
+.footer {
+  background: #1A1A1A;
+  padding: 24px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-logo {
+  font-size: 15px;
+  font-weight: 700;
+  color: #C0392B;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #888888;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: #888888;
+  transition: color 0.15s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* 
+   RESPONSIVE
+    */
+@media (max-width: 768px) {
+  .hero-title          { font-size: 30px; }
+  .features-grid       { grid-template-columns: 1fr; }
+  .steps-grid          { grid-template-columns: 1fr; }
+  .nav-links           { display: none; }
+  .footer-container    { flex-direction: column; text-align: center; }
+}
