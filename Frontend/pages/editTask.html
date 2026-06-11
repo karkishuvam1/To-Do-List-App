@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoIt — Edit Task</title>
+  <link rel="stylesheet" href="../CSS/editTask.css" />
+</head>
+
+<body>
+
+  <div class="modal-card">
+
+    <!-- RED HEADER -->
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <!-- Edit pencil icon + title -->
+        <div class="modal-header-icon">
+          <img src="../images/icons/save-changes.svg" alt="edit" />
+        </div>
+        <div class="modal-header-text">
+          <h1 class="modal-title">Edit task</h1>
+          <p class="modal-subtitle">Update your task details</p>
+        </div>
+      </div>
+
+      <!-- Status badge + Close button -->
+      <div class="modal-header-right">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          In Progress
+        </div>
+        <button class="modal-close" id="closeBtn" aria-label="Close">
+          <img src="../images/icons/plus.svg" alt="close" class="close-icon" />
+        </button>
+      </div>
+    </div>
+
+    <!-- FORM BODY -->
+    <div class="modal-body">
+
+      <!-- Meta row — calendar icon for Created, reload icon for Updated -->
+      <div class="meta-row">
+        <span class="meta-item">
+          <img src="../images/icons/calender.svg" alt="" />
+          Created: 28 May 2026
+        </span>
+        <span class="meta-item">
+          <img src="../images/icons/reload.svg" alt="" />
+          Updated: 30 May 2026
+        </span>
+      </div>
+
+      <!-- Mark as completed toggle -->
+      <div class="toggle-row">
+        <div class="toggle-left">
+          <img src="../images/icons/edit-task-tick.svg" alt="" />
+          <span>Mark as completed</span>
+        </div>
+        <!-- JS toggles .on class -->
+        <div class="toggle" id="completedToggle">
+          <div class="toggle-circle"></div>
+        </div>
+      </div>
+
+      <!-- Task Title — pre-filled -->
+      <div class="form-group">
+        <label class="form-label">
+          <img src="../images/icons/task.svg" alt="" />
+          Task title
+        </label>
+        <input
+          type="text"
+          class="form-input"
+          id="taskTitle"
+          value="Design the dashboard screen"
+        />
+      </div>
+
+      <!-- Description — pre-filled -->
+      <div class="form-group">
+        <label class="form-label">
+          <img src="../images/icons/flag.svg" alt="" />
+          Description
+        </label>
+        <textarea
+          class="form-textarea"
+          id="taskDesc"
+          rows="3"
+        >Description</textarea>
+      </div>
+
+      <!-- Priority -->
+      <div class="form-group">
+        <label class="form-label">
+          <img src="../images/icons/priority.svg" alt="" />
+          Priority
+        </label>
+        <div class="priority-row">
+          <button class="priority-btn low active" data-priority="low">
+            <span class="priority-dot"></span>
+            Low
+          </button>
+          <button class="priority-btn medium" data-priority="medium">
+            <span class="priority-dot"></span>
+            Medium
+          </button>
+          <button class="priority-btn high" data-priority="high">
+            <span class="priority-dot"></span>
+            High
+          </button>
+        </div>
+      </div>
+
+      <!-- Due Date & Time — two columns -->
+      <div class="form-row">
+
+        <div class="form-group">
+          <label class="form-label">
+            <img src="../images/icons/calender.svg" alt="" />
+            Due date
+          </label>
+          <div class="input-wrapper">
+            <img src="../images/icons/calender.svg" class="input-icon" alt="" />
+            <input
+              type="date"
+              class="form-input no-border"
+              id="dueDate"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <img src="../images/icons/time.svg" alt="" />
+            Time
+          </label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              class="form-input no-border"
+              id="taskTime"
+              value="10:00 AM"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Category -->
+      <div class="form-group">
+        <label class="form-label">
+          <img src="../images/icons/task-category.svg" alt="" />
+          Category
+        </label>
+        <div class="category-row">
+
+          <button class="category-btn active" data-category="work">
+            <img src="../images/icons/work.svg" alt="" />
+            Work
+          </button>
+
+          <button class="category-btn" data-category="personal">
+            <img src="../images/icons/house.svg" alt="" />
+            Personal
+          </button>
+
+          <button class="category-btn" data-category="shopping">
+            <img src="../images/icons/shopping.svg" alt="" />
+            Shopping
+          </button>
+
+          <button class="category-btn category-new" id="newCategoryBtn">
+            <img src="../images/icons/add.svg" alt="" />
+            New
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- /modal-body -->
+
+    <!-- FOOTER — Cancel, Delete, Save Changes -->
+    <div class="modal-footer">
+
+      <!-- Cancel -->
+      <button class="btn-cancel" id="cancelBtn">
+        <img src="../images/icons/cancel.svg" alt="" class="close-icon" />
+        Cancel
+      </button>
+
+      <!-- Delete — dark button with trash icon -->
+      <button class="btn-delete" id="deleteBtn">
+        <img src="../images/icons/delete.svg" alt="" class="delete-icon" />
+        Delete
+      </button>
+
+      <!-- Save Changes — red button with save icon -->
+      <button class="btn-save" id="saveBtn">
+        <img src="../images/icons/save-changes.svg" alt="" />
+        Save Changes
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="../Javascript/editTask.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+/*  Reset  */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* 
+   MODAL CARD
+    */
+.modal-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+/* 
+   RED HEADER
+    */
+.modal-header {
+  background-color: #C0392B;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Edit icon box */
+.modal-header-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-header-icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.modal-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Right side — status badge + close */
+.modal-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Status badge */
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Yellow dot — In Progress */
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #FCD34D;
+  flex-shrink: 0;
+}
+
+/* Close button */
+.modal-close {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Rotate plus.svg 45deg to look like X */
+.close-icon {
+  width: 25px;
+  height: 25px;
+}
+
+/* 
+   FORM BODY
+    */
+.modal-body {
+  padding: 24px 28px 8px;
+  background: #ffffff;
+}
+
+/*  Meta row — Created & Updated  */
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F3F3F3;
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #888888;
+}
+
+.meta-item img {
+  width: 15px;
+  height: 15px;
+  opacity: 0.60;
+}
+
+/*  Mark as completed toggle row  */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F3F3F3;
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+}
+
+.toggle-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.toggle-left img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.80;
+}
+
+/* Toggle switch — off state */
+.toggle {
+  width: 50px;
+  height: 28px;
+  border-radius: 999px;
+  background: #D0D0D0;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  transition: background 0.25s;
+  flex-shrink: 0;
+}
+
+/* ON state — red, circle moves right */
+.toggle.on {
+  background: #C0392B;
+}
+
+.toggle-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.20);
+  transition: transform 0.25s;
+}
+
+/* Move circle right when ON */
+.toggle.on .toggle-circle {
+  transform: translateX(22px);
+}
+
+/*  Form Group  */
+.form-group {
+  margin-bottom: 22px;
+}
+
+/* Label with icon */
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.form-label img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.80;
+}
+
+/*  Text Input  */
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #F3F3F3;
+  border: 1.5px solid #E8E8E8;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+  color: #1A1A1A;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input:focus {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
+}
+
+/*  Textarea  */
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: #F3F3F3;
+  border: 1.5px solid #E8E8E8;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+  color: #1A1A1A;
+  outline: none;
+  resize: none;
+  line-height: 1.6;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-textarea:focus {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
+}
+
+/*  Input wrapper  */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #F3F3F3;
+  border: 1.5px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 0 16px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
+}
+
+.input-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.60;
+  flex-shrink: 0;
+}
+
+/* Input inside wrapper — no own border */
+.form-input.no-border {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 14px 0;
+}
+
+.form-input.no-border:focus {
+  border: none;
+  box-shadow: none;
+}
+
+/* Calendar picker icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* 
+   PRIORITY BUTTONS
+    */
+.priority-row {
+  display: flex;
+  gap: 12px;
+}
+
+.priority-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.priority-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Low */
+.priority-btn.low {
+  background: #F0F7EC;
+  border: 1.5px solid #5A8A3C;
+  color: #3A6320;
+}
+.priority-btn.low .priority-dot { background: #3A6320; }
+
+/* Medium */
+.priority-btn.medium {
+  background: #F9F3E3;
+  border: 1.5px solid #A07820;
+  color: #7A5C10;
+}
+.priority-btn.medium .priority-dot { background: #7A5C10; }
+
+/* High */
+.priority-btn.high {
+  background: #FCEBEB;
+  border: 1.5px solid #C0392B;
+  color: #A32D2D;
+}
+.priority-btn.high .priority-dot { background: #A32D2D; }
+
+.priority-btn.active   { border-width: 2px; }
+.priority-btn:not(.active) { opacity: 0.55; }
+
+/* 
+   DUE DATE & TIME — Two columns
+    */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* 
+   CATEGORY BUTTONS
+    */
+.category-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1.5px solid #D0D0D0;
+  color: #555555;
+  transition: all 0.15s;
+}
+
+.category-btn img {
+  width: 15px;
+  height: 15px;
+  opacity: 0.65;
+}
+
+.category-btn.active {
+  background: #FCEBEB;
+  border-color: #C0392B;
+  color: #C0392B;
+}
+
+.category-btn.active img { opacity: 1; }
+
+.category-btn:hover:not(.active) {
+  border-color: #AAAAAA;
+  color: #333333;
+}
+
+/* New — dashed border */
+.category-new {
+  border-style: dashed;
+  border-color: #AAAAAA;
+  color: #888888;
+}
+
+.category-new img {
+  width: 13px;
+  height: 13px;
+}
+
+.category-new:hover {
+  border-color: #C0392B !important;
+  color: #C0392B !important;
+}
+
+/* 
+   FOOTER — Cancel | Delete | Save
+    */
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px 28px 24px;
+  border-top: 1px solid #F0F0F0;
+}
+
+/* Cancel */
+.btn-cancel {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 1.5px solid #D0D0D0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  color: #555555;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.btn-cancel:hover { border-color: #AAAAAA; }
+
+/* Delete — dark/black button */
+.btn-delete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #1A1A1A;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-delete:hover { background: #333333; }
+
+/* Invert icon color to white inside dark button */
+.delete-icon {
+  width: 17px;
+  height: 17px;
+  filter: brightness(0) invert(1);
+}
+
+/* Save Changes — red button */
+.btn-save {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #C0392B;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(192, 57, 43, 0.30);
+  transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.btn-save img {
+  width: 17px;
+  height: 17px;
+  filter: brightness(0) invert(1);
+}
+
+.btn-save:hover {
+  background: #A93226;
+  box-shadow: 0 6px 18px rgba(192, 57, 43, 0.40);
+}
+
+.btn-save:active {
+  background: #922B21;
+  transform: translateY(1px);
+}
+
+/*  Responsive  */
+@media (max-width: 520px) {
+  body            { padding: 0; }
+  .modal-card     { border-radius: 0; min-height: 100vh; }
+  .modal-body     { padding: 20px 16px 8px; }
+  .modal-footer   { padding: 16px; flex-wrap: wrap; }
+  .form-row       { grid-template-columns: 1fr; }
+  .priority-row   { gap: 8px; }
+  .status-badge   { display: none; }
+}
