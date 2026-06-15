@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoIt — Task Detail</title>
+  <link rel="stylesheet" href="../CSS/taskDetail.css" />
+</head>
+
+<body>
+
+  <div class="page-card">
+
+    <!-- 
+         RED HERO HEADER
+          -->
+    <div class="hero-header">
+
+      <!-- Top bar — back arrow + title + action icons -->
+      <div class="top-bar">
+        <button class="icon-btn" id="backBtn" aria-label="Go back">
+          <img src="../images/icons/left-arrow.svg" alt="back" />
+        </button>
+        <span class="page-title">Task detail</span>
+        <div class="top-bar-right">
+          <button class="icon-btn" aria-label="Edit task">
+            <img src="../images/icons/task-detail-edit.svg" alt="edit" />
+          </button>
+          <button class="icon-btn" aria-label="More options">
+            <img src="../images/icons/task-detail-three-dot.svg" alt="more" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Status badges row -->
+      <div class="badges-row">
+        <div class="badge badge-status">
+          <span class="dot dot-yellow"></span>
+          In Progress
+        </div>
+        <div class="badge badge-priority">
+          <span class="dot dot-pink"></span>
+          High Priority
+        </div>
+      </div>
+
+      <!-- Task title -->
+      <h1 class="task-title">
+        Design the dashboard screen for the to-do app
+      </h1>
+
+      <!-- Category tag -->
+      <div class="hero-category">
+        <img src="../images/icons/work.svg" alt="" />
+        <span>Work</span>
+      </div>
+
+    </div>
+    <!-- hero-header -->
+
+    <!-- 
+         MARK AS COMPLETED BANNER
+          -->
+    <div class="complete-banner">
+      <div class="complete-left">
+        <img src="../images/icons/task-detail-tick.svg" alt="" />
+        <span>Mark as completed</span>
+      </div>
+      <!-- JS toggles .on class -->
+      <div class="toggle" id="completedToggle">
+        <div class="toggle-circle"></div>
+      </div>
+    </div>
+
+    <!-- 
+         INFO GRID — 2 x 2 cards
+          -->
+    <div class="info-body">
+
+      <div class="info-grid">
+
+        <!-- Due date card -->
+        <div class="info-card">
+          <div class="info-card-label">
+            <img src="../images/icons/date.svg" alt="" />
+            Due date
+          </div>
+          <div class="info-card-value bold">
+            <img src="../images/icons/date.svg" alt="" />
+            31 May 2026
+          </div>
+          <div class="overdue-text">
+            <img src="../images/icons/progress.svg" alt="" />
+            Overdue by 1 day
+          </div>
+        </div>
+
+        <!-- Priority card -->
+        <div class="info-card">
+          <div class="info-card-label">
+            <img src="../images/icons/flag.svg" alt="" />
+            Priority
+          </div>
+          <div class="priority-chip">
+            <span class="chip-dot"></span>
+            High
+          </div>
+        </div>
+
+        <!-- Time card -->
+        <div class="info-card">
+          <div class="info-card-label">
+            <img src="../images/icons/time.svg" alt="" />
+            Time
+          </div>
+          <div class="info-card-value bold">10:00 AM</div>
+        </div>
+
+        <!-- Category card -->
+        <div class="info-card">
+          <div class="info-card-label">
+            <img src="../images/icons/task-category.svg" alt="" />
+            Category
+          </div>
+          <div class="info-card-value bold">
+            <img src="../images/icons/work.svg" alt="" />
+            Work
+          </div>
+        </div>
+
+      </div>
+
+      <!--  Description  -->
+      <div class="section">
+        <div class="section-label">
+          <img src="../images/icons/description.svg" alt="" />
+          Description
+        </div>
+        <div class="description-box">Description</div>
+      </div>
+
+      <!--  Progress  -->
+      <div class="section">
+        <div class="progress-header">
+          <div class="section-label">
+            <img src="../images/icons/progress.svg" alt="" />
+            Progress
+          </div>
+          <span class="progress-pct">35%</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 35%"></div>
+        </div>
+      </div>
+
+      <!--  Meta cards — Created / Updated / Owner  -->
+      <div class="meta-grid">
+
+        <div class="meta-card">
+          <div class="meta-label">
+            <img src="../images/icons/date.svg" alt="" />
+            CREATED
+          </div>
+          <div class="meta-value">28 May 2026</div>
+        </div>
+
+        <div class="meta-card">
+          <div class="meta-label">
+            <img src="../images/icons/reload.svg" alt="" />
+            UPDATED
+          </div>
+          <div class="meta-value">30 May 2026</div>
+        </div>
+
+        <div class="meta-card">
+          <div class="meta-label">
+            <img src="../images/icons/user.svg" alt="" />
+            OWNER
+          </div>
+          <div class="meta-value">You</div>
+        </div>
+
+      </div>
+
+  </div>
+
+  <script src="../Javascript/taskDetail.js"></script>
+
+</body>
+</html>

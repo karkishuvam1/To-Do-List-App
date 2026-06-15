@@ -1,0 +1,430 @@
+/* 
+   DoIt — Category Management Styles
+    */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/*  Reset  */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* 
+   PAGE CARD
+    */
+.page-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+/* 
+   RED HERO HEADER
+    */
+.hero-header {
+  background-color: #C0392B;
+  padding: 20px 22px 28px;
+}
+
+/*  Top bar  */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.page-title {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon buttons */
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.icon-btn img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+}
+
+/*  Stats row  */
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-num {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Vertical divider between stats */
+.stat-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.30);
+}
+
+/* 
+   PAGE BODY — white section
+    */
+.page-body {
+  padding: 22px;
+  background: #ffffff;
+}
+
+/* 
+   ADD NEW CATEGORY SECTION
+    */
+.add-section {
+  background: #F9F9F9;
+  border: 1px solid #EBEBEB;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 24px;
+}
+
+/* Section title with plus icon */
+.add-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.add-section-title img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Category name input */
+.category-input {
+  width: 100%;
+  padding: 13px 16px;
+  background: #ffffff;
+  border: 1.5px solid #E0E0E0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+  color: #1A1A1A;
+  outline: none;
+  margin-bottom: 14px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.category-input::placeholder {
+  color: #AAAAAA;
+}
+
+.category-input:focus {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
+}
+
+/*  Color picker dots row  */
+.color-picker-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+  outline: none;
+}
+
+.color-dot:hover {
+  transform: scale(1.15);
+}
+
+/* Active color — white ring around dot */
+.color-dot.active {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px #1A1A1A;
+}
+
+/* 
+   MY CATEGORIES HEADER
+    */
+.categories-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.categories-heading {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1A1A1A;
+  letter-spacing: 0.05em;
+}
+
+/* Count badge — light red */
+.categories-count {
+  background: #FCEBEB;
+  color: #C0392B;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+/* 
+   CATEGORY LIST
+    */
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/*  Category card  */
+.category-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #EBEBEB;
+  border-radius: 14px;
+  padding: 14px 14px 14px 0;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+/* Active card — light red background + red border */
+.active-card {
+  background: #FFF5F5;
+  border-color: #F5C6C6;
+}
+
+/*  Colored left border bar  */
+.card-left-bar {
+  width: 5px;
+  height: 64px;
+  border-radius: 0 4px 4px 0;
+  flex-shrink: 0;
+}
+
+/*  Category icon box  */
+.card-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-icon-wrap img {
+  width: 24px;
+  height: 24px;
+}
+
+/*  Category info  */
+.card-info {
+  flex: 1;
+}
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.card-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+/* Default badge */
+.default-badge {
+  background: #FCEBEB;
+  color: #C0392B;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+
+/* Meta row — tasks + done count */
+.card-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #888888;
+  font-weight: 500;
+}
+
+.card-meta img {
+  width: 14px;
+  height: 14px;
+  opacity: 0.65;
+}
+
+/* Red done count */
+.card-meta.red {
+  color: #C0392B;
+}
+
+.card-meta.red img {
+  opacity: 1;
+}
+
+/*  Edit & Delete action buttons  */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-right: 4px;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.action-btn:hover {
+  background: #F9F9F9;
+  border-color: #C0392B;
+}
+
+.action-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+/* 
+   EMPTY STATE
+    */
+.empty-state {
+  border: 2px dashed #E0D0D0;
+  border-radius: 14px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+/* Icon circle */
+.empty-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #FCEBEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.empty-icon-wrap img {
+  width: 30px;
+  height: 30px;
+}
+
+.empty-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 8px;
+}
+
+.empty-subtitle {
+  font-size: 13px;
+  color: #888888;
+  line-height: 1.6;
+}
+
+/*  Responsive  */
+@media (max-width: 520px) {
+  body        { padding: 0; }
+  .page-card  { border-radius: 0; min-height: 100vh; }
+  .page-body  { padding: 16px; }
+  .stat-num   { font-size: 28px; }
+}

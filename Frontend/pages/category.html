@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoIt — Categories</title>
+  <link rel="stylesheet" href="../CSS/category.css" />
+</head>
+
+<body>
+
+  <div class="page-card">
+
+    <!-- 
+         RED HERO HEADER
+          -->
+    <div class="hero-header">
+
+      <!-- Top bar — back arrow + title + search + more -->
+      <div class="top-bar">
+        <button class="icon-btn" id="backBtn" aria-label="Go back">
+          <img src="../images/icons/left-arrow.svg" alt="back" />
+        </button>
+        <span class="page-title">Categories</span>
+        <div class="top-bar-right">
+          <button class="icon-btn" aria-label="Search">
+            <img src="../images/icons/category-management-search.svg" alt="search" />
+          </button>
+          <button class="icon-btn" aria-label="More options">
+            <img src="../images/icons/task-detail-three-dot.svg" alt="more" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats row — Total / Tasks / Completed / Pending -->
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Total</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">9</span>
+          <span class="stat-label">Tasks</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">7</span>
+          <span class="stat-label">Completed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Pending</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- /hero-header -->
+
+    <!-- 
+         BODY
+          -->
+    <div class="page-body">
+
+      <!-- ── Add New Category section ── -->
+      <div class="add-section">
+
+        <div class="add-section-title">
+          <img src="../images/icons/category-management-plus.svg" alt="" />
+          ADD NEW CATEGORY
+        </div>
+
+        <!-- Category name input -->
+        <input
+          type="text"
+          class="category-input"
+          id="categoryNameInput"
+          placeholder="Category name..."
+        />
+
+        <!-- Color picker dots -->
+        <div class="color-picker-row">
+          <button class="color-dot active" style="background:#C0392B" data-color="#C0392B" aria-label="Red"></button>
+          <button class="color-dot" style="background:#2563EB" data-color="#2563EB" aria-label="Blue"></button>
+          <button class="color-dot" style="background:#059669" data-color="#059669" aria-label="Green"></button>
+          <button class="color-dot" style="background:#D97706" data-color="#D97706" aria-label="Orange"></button>
+          <button class="color-dot" style="background:#7C3AED" data-color="#7C3AED" aria-label="Purple"></button>
+          <button class="color-dot" style="background:#DB2777" data-color="#DB2777" aria-label="Pink"></button>
+          <button class="color-dot" style="background:#0891B2" data-color="#0891B2" aria-label="Teal"></button>
+          <button class="color-dot" style="background:#65A30D" data-color="#65A30D" aria-label="Lime"></button>
+        </div>
+
+      </div>
+
+      <!-- ── My Categories header row ── -->
+      <div class="categories-header">
+        <span class="categories-heading">MY CATEGORIES</span>
+        <span class="categories-count">2 CATEGORIES</span>
+      </div>
+
+      <!-- ── Category list ── -->
+      <div class="category-list">
+
+        <!-- Work card — active (red border + light red bg) -->
+        <div class="category-card active-card">
+          <div class="card-left-bar" style="background:#C0392B"></div>
+          <div class="card-icon-wrap" style="background:#FCEBEB">
+            <img src="../images/icons/category-management-work.svg" alt="work" />
+          </div>
+          <div class="card-info">
+            <div class="card-title-row">
+              <span class="card-name">Work</span>
+              <span class="default-badge">Default</span>
+            </div>
+            <div class="card-meta-row">
+              <span class="card-meta">
+                <img src="../images/icons/category-management-task.png" alt="" />
+                5 tasks
+              </span>
+              <span class="card-meta red">
+                <img src="../images/icons/category-management-tick.svg" alt="" />
+                3 done
+              </span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn" aria-label="Edit Work">
+              <img src="../images/icons/category-management-edit.svg" alt="edit" />
+            </button>
+            <button class="action-btn" aria-label="Delete Work">
+              <img src="../images/icons/category-management-delete.svg" alt="delete" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Personal card — blue border -->
+        <div class="category-card">
+          <div class="card-left-bar" style="background:#2563EB"></div>
+          <div class="card-icon-wrap" style="background:#EFF6FF">
+            <img src="../images/icons/category-management-house.svg" alt="personal" />
+          </div>
+          <div class="card-info">
+            <div class="card-title-row">
+              <span class="card-name">Personal</span>
+            </div>
+            <div class="card-meta-row">
+              <span class="card-meta">
+                <img src="../images/icons/category-management-task.png" alt="" />
+                3 tasks
+              </span>
+              <span class="card-meta red">
+                <img src="../images/icons/category-management-tick.svg" alt="" />
+                2 done
+              </span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn" aria-label="Edit Personal">
+              <img src="../images/icons/category-management-edit.svg" alt="edit" />
+            </button>
+            <button class="action-btn" aria-label="Delete Personal">
+              <img src="../images/icons/category-management-delete.svg" alt="delete" />
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Empty state — no more categories ── -->
+      <div class="empty-state">
+        <div class="empty-icon-wrap">
+          <img src="../images/icons/category-management-no-more-category.svg" alt="" />
+        </div>
+        <h3 class="empty-title">No more categories</h3>
+        <p class="empty-subtitle">Add a new category above to organize your tasks</p>
+      </div>
+
+    </div>
+    <!-- /page-body -->
+
+  </div>
+
+  <script src="../Javascript/category.js"></script>
+
+</body>
+</html>
