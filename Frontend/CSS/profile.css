@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/*  Reset  */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* 
+   PAGE CARD
+    */
+.page-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+/* 
+   RED HERO HEADER
+    */
+.hero-header {
+  background-color: #C0392B;
+  padding: 20px 22px 28px;
+}
+
+/*  Top bar  */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.page-title {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Back icon button */
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* Edit button — pill shape */
+.edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.edit-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.edit-btn img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/*  Profile section — avatar, name, email, plan  */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Avatar wrap — positions camera button */
+.avatar-wrap {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+}
+
+/* Avatar circle */
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  margin-top: -10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.20);
+  border: 2.5px solid rgba(255, 255, 255, 0.40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar-icon {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+/* Camera button — bottom right of avatar */
+.camera-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -5px;
+  margin-right: -20px;
+  width: 26px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.90);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.camera-btn:hover {
+  background: #ffffff;
+}
+
+.camera-btn img {
+  width: 15px;
+  height: 15px;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Free Plan badge */
+.plan-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 4px;
+}
+
+.plan-badge img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/* 
+   STATS ROW — white background
+    */
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 20px 22px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Red numbers */
+.stat-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: #C0392B;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #888888;
+}
+
+/* Vertical dividers */
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: #E8E8E8;
+}
+
+/* 
+   PAGE BODY
+    */
+.page-body {
+  padding: 20px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 
+   SETTINGS GROUP — card container
+    */
+.settings-group {
+  border: 1px solid #EBEBEB;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/*  Group header — icon + uppercase label  */
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #888888;
+  letter-spacing: 0.05em;
+  background: #F9F9F9;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.group-header img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.65;
+}
+
+/*  Settings row  */
+.settings-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.settings-row:hover {
+  background: #FAFAFA;
+}
+
+/* Row icon box */
+.row-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.row-icon-wrap img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Row text — title + subtitle */
+.row-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.row-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.row-subtitle {
+  font-size: 12px;
+  color: #888888;
+}
+
+/* Chevron arrow */
+.chevron {
+  width: 18px;
+  height: 18px;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+/* Row divider */
+.row-divider {
+  height: 1px;
+  background: #F0F0F0;
+  margin: 0 16px;
+}
+
+/* Default sort value + chevron */
+.row-value-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.row-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888888;
+}
+
+/* Latest badge */
+.latest-badge {
+  background: #FCEBEB;
+  color: #C0392B;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* 
+   NOTIFICATIONS TOGGLE
+    */
+.toggle {
+  width: 50px;
+  height: 28px;
+  border-radius: 999px;
+  background: #D0D0D0;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  transition: background 0.25s;
+  flex-shrink: 0;
+}
+
+/* ON — red */
+.toggle.on {
+  background: #C0392B;
+}
+
+.toggle-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.20);
+  transition: transform 0.25s;
+}
+
+.toggle.on .toggle-circle {
+  transform: translateX(22px);
+}
+
+/* 
+   DANGER ZONE section
+    */
+.danger-group {
+  border-color: #F5C6C6;
+}
+
+/* Red header */
+.danger-header {
+  background: #FFF5F5;
+  border-bottom-color: #F5C6C6;
+  color: #C0392B;
+}
+
+.danger-header img {
+  opacity: 1;
+}
+
+/* Danger row hover */
+.danger-row:hover {
+  background: #FFF5F5;
+}
+
+/* Red text for delete row */
+.danger-text {
+  color: #C0392B ;
+}
+
+/* Red chevron */
+.danger-chevron {
+  opacity: 1;
+  filter: none;
+}
+
+/*  Responsive  */
+@media (max-width: 520px) {
+  body       { padding: 0; }
+  .page-card { border-radius: 0; min-height: 100vh; }
+  .page-body { padding: 16px; }
+  .stat-num  { font-size: 22px; }
+}

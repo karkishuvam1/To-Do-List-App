@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoIt — Profile & Settings</title>
+  <link rel="stylesheet" href="../CSS/profile.css" />
+</head>
+
+<body>
+
+  <div class="page-card">
+
+    <!-- RED HERO HEADER -->
+    <div class="hero-header">
+
+      <!-- Top bar — back + title + edit button -->
+      <div class="top-bar">
+        <button class="icon-btn" id="backBtn" aria-label="Go back">
+          <img src="../images/icons/left-arrow.svg" alt="back" />
+        </button>
+        <span class="page-title">Profile & Settings</span>
+        <button class="edit-btn" aria-label="Edit profile">
+          <img src="../images/icons/profile-edit.svg" alt="edit" />
+          Edit
+        </button>
+      </div>
+
+      <!-- Avatar + name + email + plan badge -->
+      <div class="profile-section">
+
+        <div class="avatar-wrap">
+          <div class="avatar-circle">
+            <img src="../images/icons/edit-profile-user.svg" alt="avatar" class="avatar-icon" />
+          </div>
+          <!-- Camera icon for photo upload -->
+          <button class="camera-btn" aria-label="Change photo">
+            <img src="../images/icons/camera.svg" alt="camera" />
+          </button>
+        </div>
+
+        <h2 class="profile-name">Shuvam Karki</h2>
+        <p class="profile-email">shuvam@gmail.com</p>
+
+        <!-- Free Plan badge -->
+        <div class="plan-badge">
+          <img src="../images/icons/crown.svg" alt="crown" />
+          Free Plan
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--  STATS ROW — Total / Completed / Pending -->
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-num">24</span>
+        <span class="stat-label">Total tasks</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">18</span>
+        <span class="stat-label">Completed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">6</span>
+        <span class="stat-label">Pending</span>
+      </div>
+    </div>
+
+    <!-- PAGE BODY -->
+    <div class="page-body">
+
+      <!--  ACCOUNT section  -->
+      <div class="settings-group">
+        <div class="group-header">
+          <img src="../images/icons/profile-account.svg" alt="" />
+          ACCOUNT
+        </div>
+
+        <div class="settings-row">
+          <div class="row-icon-wrap" style="background:#FCEBEB">
+            <img src="../images/icons/edit-profile-user.svg" alt="" />
+          </div>
+          <div class="row-info">
+            <span class="row-title">Edit Profile</span>
+            <span class="row-subtitle">Name, email, avatar</span>
+          </div>
+          <img src="../images/icons/right-arrow.svg" alt="" class="chevron" />
+        </div>
+
+        <div class="row-divider"></div>
+
+        <div class="settings-row">
+          <div class="row-icon-wrap" style="background:#FCEBEB">
+            <img src="../images/icons/lock.svg" alt="" />
+          </div>
+          <div class="row-info">
+            <span class="row-title">Change password</span>
+            <span class="row-subtitle">Update your password</span>
+          </div>
+          <img src="../images/icons/right-arrow.svg" alt="" class="chevron" />
+        </div>
+
+        <div class="row-divider"></div>
+
+        <div class="settings-row">
+          <div class="row-icon-wrap" style="background:#EFF6FF">
+            <img src="../images/icons/profile-email.svg" alt="" />
+          </div>
+          <div class="row-info">
+            <span class="row-title">Email address</span>
+            <span class="row-subtitle">shuvam@email.com</span>
+          </div>
+          <img src="../images/icons/right-arrow.svg" alt="" class="chevron" />
+        </div>
+
+      </div>
+
+      <!--  PREFERENCES section  -->
+      <div class="settings-group">
+        <div class="group-header">
+          <img src="../images/icons/profile-settings.svg" alt="" />
+          PREFERENCES
+        </div>
+
+        <!-- Notifications row — has toggle instead of chevron -->
+        <div class="settings-row">
+          <div class="row-icon-wrap" style="background:#FFFBEB">
+            <img src="../images/icons/profile-notifications.svg" alt="" />
+          </div>
+          <div class="row-info">
+            <span class="row-title">Notifications</span>
+            <span class="row-subtitle">Task reminders & alerts</span>
+          </div>
+          <!-- JS toggles .on class -->
+          <div class="toggle on" id="notifToggle">
+            <div class="toggle-circle"></div>
+          </div>
+        </div>
+
+        <div class="row-divider"></div>
+
+        <!-- Default sort row — shows current value -->
+        <div class="settings-row">
+          <div class="row-icon-wrap" style="background:#FCEBEB">
+            <img src="../images/icons/profile-default-sort.svg" alt="" />
+          </div>
+          <div class="row-info">
+            <span class="row-title">Default sort</span>
+            <span class="row-subtitle">How tasks are ordered</span>
+          </div>
+          <div class="row-value-wrap">
+            <span class="row-value">Due date</span>
+            <img src="../images/icons/right-arrow.svg" alt="" class="chevron" />
+          </div>
+        </div>
+
+      </div>
+
+      <!--  ABOUT section  -->
+      <div class="settings-group">
+        <div class="group-header">
+          <img src="../images/icons/profile-about.svg" alt="" />
+          ABOUT
+        </div>
+
+        <!-- App version row — has Latest badge -->
+        <div class="settings-row">
+          <div class="row-icon-wrap" style="background:#FCEBEB">
+            <img src="../images/icons/edit-profile-user.svg" alt="" />
+          </div>
+          <div class="row-info">
+            <span class="row-title">App version</span>
+            <span class="row-subtitle">DoIt v1.0.0</span>
+          </div>
+          <span class="latest-badge">Latest</span>
+        </div>
+
+        <div class="row-divider"></div>
+
+        <div class="settings-row">
+          <div class="row-icon-wrap" style="background:#FCEBEB">
+            <img src="../images/icons/profile-privacy.svg" alt="" />
+          </div>
+          <div class="row-info">
+            <span class="row-title">Privacy policy</span>
+            <span class="row-subtitle">How we use your data</span>
+          </div>
+          <img src="../images/icons/right-arrow.svg" alt="" class="chevron" />
+        </div>
+
+        <div class="row-divider"></div>
+
+        <div class="settings-row">
+          <div class="row-icon-wrap" style="background:#FCEBEB">
+            <img src="../images/icons/edit-profile-user.svg" alt="" />
+          </div>
+          <div class="row-info">
+            <span class="row-title">Terms of service</span>
+            <span class="row-subtitle">Usage terms & conditions</span>
+          </div>
+          <img src="../images/icons/right-arrow.svg" alt="" class="chevron" />
+        </div>
+
+      </div>
+
+      <!--  DANGER ZONE section  -->
+      <div class="settings-group danger-group">
+        <div class="group-header danger-header">
+          <img src="../images/icons/profile-danger.svg" alt="" />
+          DANGER ZONE
+        </div>
+
+        <!-- Delete account — all red -->
+        <div class="settings-row danger-row">
+          <div class="row-icon-wrap" style="background:#FCEBEB">
+            <img src="../images/icons/profile-delete.svg" alt="" />
+          </div>
+          <div class="row-info">
+            <span class="row-title danger-text">Delete account</span>
+            <span class="row-subtitle danger-text">Permanently remove your account and all data</span>
+          </div>
+          <img src="../images/icons/right-arrow.svg" alt="" class="chevron danger-chevron" />
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../Javascript/profile.js"></script>
+
+</body>
+</html>
