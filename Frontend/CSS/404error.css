@@ -1,0 +1,148 @@
+/* ================================
+   DoIt — 404 Error Page Styles
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Full screen — no card, no padding */
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ════════════════════════════════
+   PAGE — takes full viewport
+   ════════════════════════════════ */
+.page-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ════════════════════════════════
+   RED HEADER — full width
+   ════════════════════════════════ */
+.hero-header {
+  background-color: #C0392B;
+  padding: 20px 22px;
+  width: 100%;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Back icon button */
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* ════════════════════════════════
+   ERROR BODY — fills remaining height
+   ════════════════════════════════ */
+.error-body {
+  flex: 1;                   /* fills all remaining vertical space */
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   /* vertically centers content */
+  text-align: center;
+  padding: 40px 32px;
+}
+
+/* ── X circle icon ── */
+.error-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 36px;
+}
+
+.error-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── 404 number ── */
+.error-code {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+/* Dark red — 4 and 4 */
+.code-dark {
+  font-size: 96px;
+  font-weight: 800;
+  color: #C0392B;
+}
+
+/* Light pink — middle 0 */
+.code-light {
+  font-size: 96px;
+  font-weight: 800;
+  color: #F5C6C6;
+}
+
+/* ── Title ── */
+.error-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 12px;
+}
+
+/* ── Subtitle ── */
+.error-subtitle {
+  font-size: 14px;
+  color: #888888;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 520px) {
+  .code-dark,
+  .code-light { font-size: 72px; }
+}

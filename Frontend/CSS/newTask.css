@@ -15,6 +15,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding: 40px 16px;
+  overflow: hidden;
 }
 
 /* 
@@ -108,7 +109,7 @@ body {
   background: #ffffff;
 }
 
-/* ── Form Group — label + field ── */
+/* Form Group — label + field */
 .form-group {
   margin-bottom: 22px;
 }
@@ -136,7 +137,7 @@ body {
   font-size: 14px;
 }
 
-/* ── Text Input ── */
+/* Text Input */
 .form-input {
   width: 100%;
   padding: 14px 16px;
@@ -159,7 +160,7 @@ body {
   box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
 }
 
-/* ── Textarea ── */
+/* Textarea */
 .form-textarea {
   width: 100%;
   padding: 14px 16px;
@@ -184,7 +185,7 @@ body {
   box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
 }
 
-/* ── Input wrapper (icon inside field) ── */
+/* Input wrapper (icon inside field) */
 .input-wrapper {
   display: flex;
   align-items: center;
@@ -430,7 +431,7 @@ body {
   transform: translateY(1px);
 }
 
-/* ── Responsive ── */
+/* Responsive */
 @media (max-width: 520px) {
   body          { padding: 0; }
   .modal-card   { border-radius: 0; min-height: 100vh; }
