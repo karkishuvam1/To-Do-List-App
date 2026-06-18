@@ -1,10 +1,6 @@
-/* ================================
-   DoIt — 404 Error Page Styles
-   ================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
-/* ── Reset ── */
+/*Reset*/
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -20,9 +16,8 @@ body {
   flex-direction: column;
 }
 
-/* ════════════════════════════════
-   PAGE — takes full viewport
-   ════════════════════════════════ */
+/* PAGE — takes full viewport
+   */
 .page-card {
   display: flex;
   flex-direction: column;
@@ -30,9 +25,8 @@ body {
   width: 100%;
 }
 
-/* ════════════════════════════════
-   RED HEADER — full width
-   ════════════════════════════════ */
+/* RED HEADER — full width
+   */
 .hero-header {
   background-color: #C0392B;
   padding: 20px 22px;
@@ -77,9 +71,8 @@ body {
   filter: brightness(0) invert(1);
 }
 
-/* ════════════════════════════════
-   ERROR BODY — fills remaining height
-   ════════════════════════════════ */
+/* ERROR BODY — fills remaining height
+   */
 .error-body {
   flex: 1;                   /* fills all remaining vertical space */
   background: #ffffff;
@@ -91,7 +84,7 @@ body {
   padding: 40px 32px;
 }
 
-/* ── X circle icon ── */
+/*X circle icon*/
 .error-icon {
   width: 100px;
   height: 100px;
@@ -103,7 +96,7 @@ body {
   height: 100%;
 }
 
-/* ── 404 number ── */
+/*404 number*/
 .error-code {
   display: flex;
   align-items: center;
@@ -125,7 +118,7 @@ body {
   color: #F5C6C6;
 }
 
-/* ── Title ── */
+/*Title*/
 .error-title {
   font-size: 22px;
   font-weight: 700;
@@ -133,7 +126,7 @@ body {
   margin-bottom: 12px;
 }
 
-/* ── Subtitle ── */
+/*Subtitle*/
 .error-subtitle {
   font-size: 14px;
   color: #888888;
@@ -141,7 +134,7 @@ body {
   max-width: 320px;
 }
 
-/* ── Responsive ── */
+/*Responsive*/
 @media (max-width: 520px) {
   .code-dark,
   .code-light { font-size: 72px; }
