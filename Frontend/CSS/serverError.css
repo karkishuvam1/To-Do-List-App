@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 /*Reset*/
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Full screen — no card, no padding */
+/* Full screen page */
 body {
   font-family: 'Manrope', sans-serif;
   background-color: #ffffff;
@@ -15,18 +15,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-/* PAGE — takes full viewport
-   */
-.page-card {
+.page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
 }
 
-/* RED HEADER — full width
-   */
 .hero-header {
   background-color: #C0392B;
   padding: 20px 22px;
@@ -71,10 +66,8 @@ body {
   filter: brightness(0) invert(1);
 }
 
-/* ERROR BODY — fills remaining height
-   */
 .error-body {
-  flex: 1;                   /* fills all remaining vertical space */
+  flex: 1;                   /* fills all space below header */
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -84,10 +77,10 @@ body {
   padding: 40px 32px;
 }
 
-/*X circle icon*/
+/*Server illustration icon*/
 .error-icon {
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   margin-bottom: 36px;
 }
 
@@ -96,7 +89,7 @@ body {
   height: 100%;
 }
 
-/*404 number*/
+/*500 number*/
 .error-code {
   display: flex;
   align-items: center;
@@ -104,14 +97,14 @@ body {
   margin-bottom: 20px;
 }
 
-/* Dark red — 4 and 4 */
+/* Dark red — 5 */
 .code-dark {
   font-size: 96px;
   font-weight: 800;
   color: #C0392B;
 }
 
-/* Light pink — middle 0 */
+/* Light pink — 00 */
 .code-light {
   font-size: 96px;
   font-weight: 800;
@@ -138,4 +131,5 @@ body {
 @media (max-width: 520px) {
   .code-dark,
   .code-light { font-size: 72px; }
+  .error-icon { width: 110px; height: 110px; }
 }
