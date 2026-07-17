@@ -1,0 +1,5 @@
+# Never push this
+node_modules/
+
+# This also should not be pushed
+.env
