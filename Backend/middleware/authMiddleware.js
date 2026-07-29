@@ -5,7 +5,7 @@ const { message } = require('statuses');
 const protect = async (req, res, next)=>{
     let token;
     // Check if the token exists
-    if(req.headers.authorization && req.headers.authorizationstartsWith('Bearer'))
+    if(req.headers.authorization && req.headers.authorization.startsWith('Bearer'))
     {
         try{
             // Extract the token remove 'Bearer'
