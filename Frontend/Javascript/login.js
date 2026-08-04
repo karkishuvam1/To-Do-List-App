@@ -8,7 +8,7 @@ const eyeIcon = document.getElementById('eyeIcon');
 const loginBtn = document.getElementById('loginBtn');
 
 
-/* ── Eye Icon Paths ── */
+/*  Eye Icon Paths  */
 const eyeOpenPath   = '../images/icons/eye.svg';
 const eyeClosedPath = '../images/icons/closed-eye.svg';
 
@@ -48,7 +48,7 @@ loginForm.addEventListener('submit', async function (e) {
       headers: {'content-type': 'application/json'},
       body: JSON.stringify({email,password})
     });
-    const data = await response.json();
+    const data = await response.json(); //It will parse the response as JSON
     if(!response.ok){
       showError(data.message);
       return;
